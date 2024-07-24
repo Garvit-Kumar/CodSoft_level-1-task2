@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch TV Shows</title>
+    <link rel="icon" href="netflix 1.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="logo.png" class="img">
+            <div>
+                <a href="Hindi.html" class="ree">English<img src="down-icon.png"></a>
+                <button onclick="sign()">Sign up</button>
+            </div>
+        </nav>
+        <div class="content">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <h3>Watch anywhere. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="signup">
+                <input type="text" placeholder="Email Address" class="input" id="sub"  />
+                <button onclick="start()">Get Start</button>
+            </div>
+        </div>
+    </div>
+    <div class="feature">
+        <div class="row">
+            <div class="text">
+                <h1>Enjoy on your TV</h1>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="fear">
+                <img src="feature-1.png">
+                <div>
+                </div>
+            </div>
+            <div class="featur1">
+                <div class="ro1">
+                    <div class="fea1">
+                        <img src="feature-2.png ">
+                        <div>
+                            <div class="tex1">
+                                <h1>Download your shows to watch offline</h1>
+                                <p>Save your favourites easily and always have something to watch.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        function start(){
+                            let value = document.getElementById('sub').value;
+                            if (value == '' ) {
+                                alert("Please enter both Email and Password.") ;
+                                return;
+                            }
+                            else if (value == 'singhalvansh74@gmail.com') {
+                                // alert("Login successful!");
+                                // Redirect to another page
+                                window.location.href = "profile.html";
+                            } else {
+                                alert("Invalid email or password. Please try again.");
+                            }
+                            document.getElementById('sub').value = "";
+                        }
+
+                        function sign() {
+                            window.location.href = 'Login.html'
+                        }
+                        </script>
+</body>
+
+</html>
